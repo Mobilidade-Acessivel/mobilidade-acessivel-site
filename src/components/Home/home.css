@@ -1,0 +1,67 @@
+.mob-image{
+    position: relative;
+    left: 400px;
+}
+
+.mob-text {
+    font: italic 30pt Sans-Serif;
+    color: white;
+    position: relative;
+    left: 250px;
+    bottom: 340px;
+}
+
+.text1 {
+    font: bold 20pt Sans-Serif;
+    color: white;
+}
+
+.missao-text {
+    font: normal 15pt Sans-Serif;
+    color: white;
+}
+
+.missao p {
+    font: normal 25pt Sans-Serif;
+    color: white;
+}
+
+.barra {
+    width: 100%;
+    border: none;
+    height: 1px; 
+    background-color: black; 
+    margin: 10px 0; 
+
+}
+
+.missao {
+    position: relative;
+    right: 750px;
+}
+
+.botoes {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    display: flex;
+    gap: 25px; 
+}
+
+.botoes button {
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8)); 
+    color: black; 
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14pt;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, background 0.5s ease-in-out; 
+}
+
+.botoes button:hover {
+    transform: scale(1.05); 
+    background: linear-gradient(to top, rgba(157, 157, 157, 0.8), rgba(255, 255, 255, 0.8) 50%); 
+}
+
