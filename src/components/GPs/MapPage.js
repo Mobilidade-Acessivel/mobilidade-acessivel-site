@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react'; // Adicione useCallback
 import mapboxgl from 'mapbox-gl';
 import './MapPage.css'; 
 
@@ -40,7 +40,7 @@ const MapPage = () => {
     }
   };
 
-  const drawRoute = async () => {
+  const drawRoute = useCallback(async () => { // Usando useCallback para memoizar a função
     if (!userLocation || !mapLocation) return;
 
     const response = await fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${userLocation[0]},${userLocation[1]};${mapLocation[0]},${mapLocation[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`);
@@ -75,7 +75,6 @@ const MapPage = () => {
 
       // Adiciona um marcador na localização do destino
       new mapboxgl.Marker({ 
-        // Altere o caminho para o seu ícone
         element: createCustomMarker(),
       })
       .setLngLat(mapLocation)
@@ -83,12 +82,12 @@ const MapPage = () => {
     } else {
       alert('Rota não encontrada.');
     }
-  };
+  }, [userLocation, mapLocation, map]); // Dependências de drawRoute
 
   const createCustomMarker = () => {
     const markerDiv = document.createElement('div');
     markerDiv.className = 'custom-marker'; // Adicione uma classe para estilização se necessário
-    markerDiv.style.backgroundImage = 'url(./assets/pinoloc.png)'; // Substitua pelo caminho do seu ícone
+    markerDiv.style.backgroundImage = 'url(./assets/pinoloc.png)'; // Certifique-se de que o caminho está correto
     markerDiv.style.width = '30px'; // Ajuste o tamanho do ícone
     markerDiv.style.height = '30px'; // Ajuste o tamanho do ícone
     markerDiv.style.backgroundSize = 'cover'; // Para cobrir a div com a imagem
@@ -118,7 +117,7 @@ const MapPage = () => {
     if (userLocation && mapLocation) {
       drawRoute(); 
     }
-  }, [userLocation, mapLocation]);
+  }, [userLocation, mapLocation, drawRoute]); // Adicionando drawRoute aqui
 
   return (
     <div className="map-container">
