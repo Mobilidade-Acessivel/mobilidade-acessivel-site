@@ -4,7 +4,7 @@
 
 **Mobilidade acessível** é um aplicativo web desenvolvido em **React** que visa melhorar a experiência do usuário ao acessar informações sobre mobilidade urbana. O aplicativo permite que os usuários visualizem mapas interativos, encontrem rotas e direções e obtenham informações sobre o transporte na cidade. Com uma interface intuitiva, o Mobilidade busca oferecer uma solução prática e eficiente para os desafios diários de locomoção.
 
-Você pode acessar o aplicativo online através do seguinte link: [Mobilidade Acessível](https://6701bbe8aa1f288ab766a17f--mobilidadeacessivel.netlify.app/home). 
+Você pode acessar o site online através do seguinte link: [Mobilidade Acessível](https://6701bbe8aa1f288ab766a17f--mobilidadeacessivel.netlify.app/home). 
 
 ## Funcionalidades
 
