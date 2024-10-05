@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './home.css'; 
 import favicon from './favicon.png';
-import mobimage from './assets/mobimage.jpg';
 
 function Home() {
   const navigate = useNavigate();

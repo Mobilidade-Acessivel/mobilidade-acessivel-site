@@ -4,9 +4,6 @@ import './profile.css'
 import pfp from './assets/pfp.png';
 
 function Profile() {
-    const navigate = useNavigate();
-
-
 
     return (
         <div className='container-principal'>
