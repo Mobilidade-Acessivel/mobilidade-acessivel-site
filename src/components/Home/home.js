@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHref, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './home.css'; 
 import favicon from './favicon.png';
 import mobimage from './assets/mobimage.jpg';
@@ -20,7 +20,7 @@ function Home() {
   }
   
   const trocarParaGPS = () => {
-    navigate('/gps')
+    navigate('/MapPage')
   }
 
   return (

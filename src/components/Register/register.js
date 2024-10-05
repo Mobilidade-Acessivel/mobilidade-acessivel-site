@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHref, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './register.css'; 
 import favicon from './favicon.png';
 import google from './assets/google.png'
@@ -18,9 +18,9 @@ function Register() {
     window.location.href = 'https://accounts.google.com/AddSession/signinchooser?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&hl=pt_BR&authuser=0&ddm=0&flowName=GlifWebSignIn&flowEntry=AddSession';
 }
 
-const loginFacebook = () => {
-    window.location.href = 'https://pt-br.facebook.com/login/device-based/regular/login/';
-}
+  const loginFacebook = () => {
+      window.location.href = 'https://pt-br.facebook.com/login/device-based/regular/login/';
+  }
 
   return (
     <div class='container-principal'>

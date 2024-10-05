@@ -6,7 +6,7 @@ function Init() {
     const navigate = useNavigate();
 
     const trocarParaRegister = () => {
-      navigate('/src/components/Register/register.js');
+      navigate('/register');
     }
 
 
