@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
 import './profile.css'
 import pfp from './assets/pfp.png';
 
@@ -8,7 +7,7 @@ function Profile() {
     return (
         <div className='container-principal'>
             <div className='imagem'>
-                <img src={pfp} className='pfp'/>
+                <img src={pfp} className='pfp' alt="Profile Picture"/>
             </div>
 
             <div className='nome-config'>
