@@ -4,8 +4,8 @@ import Init from './components/Init/init';
 import Register from './components/Register/register'; 
 import Home from './components/Home/home';
 import Profile from './components/Profile/profile';
-import MapPage from './components/GPs/MapPage'; // Importando o novo componente MapPage
-import './styles/GlobalStyles.css'; // Global styles
+import MapPage from './components/GPs/MapPage'; 
+import './styles/GlobalStyles.css'; 
 
 function App() {
   return (

@@ -1,61 +1,61 @@
 #map {
     width: 100%;
-    height: 100%; /* Certifique-se de que o mapa tenha uma altura definida */
+    height: 100%; 
   }
   
   .map-container {
-    display: flex; /* Usamos flexbox para alocar o mapa e a barra lateral */
-    height: 100vh; /* Altura total da tela */
+    display: flex; 
+    height: 100vh; 
   }
   
   .sidebar {
-    width: 500px; /* Largura da barra lateral */
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
-    padding: 20px; /* Espaçamento interno */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-    border-radius: 8px; /* Bordas arredondadas */
+    width: 500px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px; 
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
   }
   
   .sidebar h2 {
-    margin: 0 0 15px; /* Margem para o título */
-    font-size: 24px; /* Tamanho da fonte do título */
-    color: #333; /* Cor do texto */
+    margin: 0 0 15px; 
+    font-size: 24px; 
+    color: #333; 
   }
   
   input[type="text"] {
-    width: 100%; /* Ocupa toda a largura disponível */
-    padding: 10px; /* Espaçamento interno do input */
-    border: 2px solid #007bff; /* Borda azul */
-    border-radius: 5px; /* Cantos arredondados */
-    font-size: 16px; /* Tamanho da fonte */
-    margin-bottom: 10px; /* Margem inferior */
-    transition: border-color 0.3s; /* Transição suave na cor da borda */
+    width: 100%;
+    padding: 10px; 
+    border: 2px solid #007bff; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    margin-bottom: 10px;
+    transition: border-color 0.3s; 
   }
   
   input[type="text"]:focus {
-    border-color: #0056b3; /* Borda mais escura quando em foco */
-    outline: none; /* Remove a borda padrão do foco */
+    border-color: #0056b3; 
+    outline: none; 
   }
   
   button {
-    width: 100%; /* Ocupa toda a largura disponível */
-    padding: 10px; /* Espaçamento interno do botão */
-    background-color: #007bff; /* Cor de fundo azul */
-    color: white; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Cantos arredondados */
-    font-size: 16px; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
-    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+    width: 100%; 
+    padding: 10px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
   }
   
   button:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    background-color: #0056b3; 
   }
 
   .custom-marker {
-    width: 30px; /* Ajuste o tamanho conforme necessário */
-    height: 30px; /* Ajuste o tamanho conforme necessário */
-    background-size: cover; /* Para cobrir a div com a imagem */
+    width: 30px; 
+    height: 30px; 
+    background-size: cover; 
   }
   
