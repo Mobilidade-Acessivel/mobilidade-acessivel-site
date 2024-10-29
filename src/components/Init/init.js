@@ -6,7 +6,7 @@ function Init() {
     const navigate = useNavigate();
 
     const trocarParaRegister = () => {
-      navigate('/register');
+      navigate('/login');
     }
 
 
