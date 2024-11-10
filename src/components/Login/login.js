@@ -7,8 +7,8 @@ import logo from './favicon.png';
 function Login() {
   const navigate = useNavigate();
 
-  const trocarParaGPS = () => {
-    navigate('/MapPage')
+  const trocarParaHome = () => {
+    navigate('/home')
   }
 
   return (
@@ -40,7 +40,7 @@ function Login() {
             <a href="#">Esqueci a minha Senha</a>
           </div>
           
-          <button type="submit" className="submit-button" onClick={trocarParaGPS}>Acessar</button>
+          <button type="submit" className="submit-button" onClick={trocarParaHome}>Acessar</button>
 
           <div className="register-link">
             <p>Não tem cadastro ? <a href="#">Cadastre-se</a></p>

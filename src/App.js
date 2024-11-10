@@ -4,6 +4,7 @@ import Init from './components/Init/init';
 import Login from './components/Login/login'; 
 import Home from './components/Home/home';
 import MapPage from './components/GPs/MapPage'; 
+import Config from './components/Config/config';
 import './styles/GlobalStyles.css'; 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Init />} /> {/* Página inicial */}
         <Route path="/login" element={<Login />} /> {/* Página de registro */}
         <Route path="/home" element={<Home />} /> {/* Página inicial do app */}
+        <Route path="/config" element={<Config />} /> {/* Página de configurações */}
         <Route path="/MapPage" element={<MapPage />} /> {/* Página do mapa */}
       </Routes>
     </Router>

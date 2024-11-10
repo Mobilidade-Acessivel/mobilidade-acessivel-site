@@ -115,8 +115,8 @@ const MapPage = () => {
     const markerDiv = document.createElement('div');
     markerDiv.className = 'custom-marker';
     markerDiv.style.backgroundImage = 'url(./assets/pinoloc.png)';
-    markerDiv.style.width = '700px';
-    markerDiv.style.height = '30px';
+    markerDiv.style.width = '32px';
+    markerDiv.style.height = '32px';
     markerDiv.style.backgroundSize = 'cover';
     return markerDiv;
   };
@@ -148,19 +148,17 @@ const MapPage = () => {
 
   return (
     <div className="map-container">
-      <div className="sidebar">
-        <h2>Pesquisar Local</h2>
+      <div className="search-bar">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
-            searchLocation(); // Pesquisa enquanto o usuário digita
+            searchLocation();
           }}
           onKeyPress={handleKeyPress}
-          placeholder="Digite um local..."
+          placeholder="Pesquisar local..."
         />
-        <button onClick={searchLocation}>Buscar</button>
         {suggestions.length > 0 && (
           <ul className="suggestions-list">
             {suggestions.map((suggestion, index) => (
@@ -171,7 +169,7 @@ const MapPage = () => {
           </ul>
         )}
       </div>
-      <div id="map"></div> {/* Removido estilo inline */}
+      <div id="map"></div>
     </div>
   );
 };

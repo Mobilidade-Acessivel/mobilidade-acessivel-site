@@ -6,8 +6,8 @@ import favicon from './favicon.png';
 function Home() {
   const navigate = useNavigate();
 
-  const trocarParaAgenda = () => {
-    navigate('/agenda');
+  const trocarParaConfig = () => {
+    navigate('/config');
   }
 
   const trocarParaPerfil = () => {
@@ -42,7 +42,7 @@ function Home() {
       <button className='perfil' onClick={trocarParaPerfil}>
         Perfil
       </button>
-      <button className='agenda' onClick={trocarParaAgenda}>
+      <button className='Configurações' onClick={trocarParaConfig}>
         Agenda
       </button>
       <button className='suporte' onClick={trocarParaContact}>
