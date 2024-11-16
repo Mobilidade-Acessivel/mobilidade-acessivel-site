@@ -10,18 +10,26 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* Ativa o flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin: 0; /* Remove margens padrão do body */
 }
 
 .container {
+  top: 50px;
   width: 420px;
+  max-width: 100%; /* Responsivo para telas menores */
   background-color: rgba(0, 42, 121, 0.1);
   border: 2px solid rgb(0, 0, 0);
   backdrop-filter: blur(20px);
   border-radius: 10px;
   padding: 30px 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona um leve destaque */
+  
+  /* Centralizado com Flexbox */
+  position: relative;
+  bottom: 0; /* Remove o deslocamento vertical */
 }
 
 h1 {
@@ -119,11 +127,12 @@ margin: 10px 0;
 
 .logo {
   display: block;
-  margin: 0 auto 20px auto; /* Centraliza e ajusta o espaçamento */
-  max-width: 200px; /* Ajusta o tamanho da logo */
+  margin: 0 auto 20px auto; /* Centraliza horizontalmente */
+  max-width: 200px; /* Limita o tamanho da logo */
 }
 
 .container, .logo {
   position: relative;
+  top: 50px;
   bottom: 70px;
 }

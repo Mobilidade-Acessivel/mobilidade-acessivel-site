@@ -1,67 +1,137 @@
-.mob-image{
-    position: relative;
-    left: 400px;
+/* Fundo estilizado */
+body {
+    background-color: #0061e7;
+    background-image: linear-gradient(to bottom, #0061e7, #004ba0);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.mob-text {
-    font: italic 30pt Sans-Serif;
-    color: white;
-    position: relative;
-    left: 250px;
-    bottom: 340px;
-}
-
-.text1 {
-    font: bold 20pt Sans-Serif;
-    color: white;
-}
-
-.missao-text {
-    font: normal 15pt Sans-Serif;
-    color: white;
-}
-
-.missao p {
-    font: normal 25pt Sans-Serif;
-    color: white;
-}
-
-.barra {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    border: none;
-    height: 1px; 
-    background-color: black; 
-    margin: 10px 0; 
-
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(8px);
 }
 
-.missao {
-    position: relative;
-    right: 750px;
-}
-
-.botoes {
-    position: absolute;
-    top: 20px; 
-    right: 20px; 
+/* Layout principal */
+.home-container {
     display: flex;
-    gap: 25px; 
+    justify-content: center;
+    padding: 20px;
+    margin-top: 60px;
 }
 
-.botoes button {
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8)); 
-    color: black; 
+.home-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Navegação no topo */
+.home-navigation {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.home-nav-button {
+    width: 500px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    margin: 0 10px;
     border: none;
     border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14pt;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease-in-out, background 0.5s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
-.botoes button:hover {
-    transform: scale(1.05); 
-    background: linear-gradient(to top, rgba(157, 157, 157, 0.8), rgba(255, 255, 255, 0.8) 50%); 
+/* Hover nos botões */
+.home-nav-button:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* Imagem à esquerda */
+.home-image {
+    position: relative;
+    top: 200px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-image img {
+    right: 500px;
+    position: relative;
+    bottom: 150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto no canto direito */
+.home-text {
+    position: absolute;
+    left: 900px;
+    flex: 1;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 900px;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .home-text {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .home-nav-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .home-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 function Settings() {
   const navigate = useNavigate();
 
-  // Estado para armazenar as configurações
   const [settings, setSettings] = useState({
     displayName: 'Seu nome',
     username: 'Username123',
@@ -14,7 +13,6 @@ function Settings() {
     birthday: '2000-01-01',
     gender: 'masculino',
     language: 'pt-br',
-    theme: 'dark',
   });
 
   const handleChange = (e) => {
@@ -26,7 +24,6 @@ function Settings() {
   };
 
   const saveSettings = () => {
-    // Aqui você pode adicionar a lógica para salvar as configurações
     console.log("Settings saved:", settings);
     alert("As configurações foram salvas!");
   };
@@ -47,7 +44,7 @@ function Settings() {
           />
         </label>
         <label>
-          Username:
+          Nome de usuário:
           <input
             type="text"
             name="username"
@@ -77,7 +74,7 @@ function Settings() {
 
       <section className="login-methods">
         <h2>Metódos de Login</h2>
-        <button onClick={() => alert("Passkey added successfully!")}>
+        <button onClick={() => alert("Passkey Gerada: ")}>
           Adicione uma Passkey
         </button>
       </section>
@@ -110,22 +107,7 @@ function Settings() {
           <select name="language" value={settings.language} onChange={handleChange}>
             <option value="pt">Português</option>
             <option value="es">Espanhol</option>
-            <option value="en
-            
-            
-            
-            
-            
-            
-            
-            ">Inglês</option>
-          </select>
-        </label>
-        <label>
-          Theme:
-          <select name="theme" value={settings.theme} onChange={handleChange}>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
+            <option value="en">Inglês</option>
           </select>
         </label>
       </section>
